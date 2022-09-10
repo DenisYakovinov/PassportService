@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  passport_db:
+    container_name: passport_db
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: passport_db
+      PGDATA: /var/lib/postgresql/data/pgdata
+      DB_HOST: 0.0.0.0
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data/
+    restart: always
+    ports:
+      - 5432:5432
