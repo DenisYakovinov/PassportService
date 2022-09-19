@@ -1,3 +1,4 @@
+[![Java CI with Maven](https://github.com/DenisYakovinov/PassportService/actions/workflows/maven.yml/badge.svg)](https://github.com/DenisYakovinov/PassportService/actions/workflows/maven.yml)
 # passport service
 
 The service provides a passport management service.
