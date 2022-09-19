@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
 
-    <property name="LogsPath" value="logs/test.log" />
+    <property name="LogsPath" value="logs/passportService.log" />
 
     <appender name="RollinffileAppender"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -27,14 +27,14 @@
         </encoder>
     </appender>
 
-    <logger name="org.springframework" level="WARN"/>
+    <logger name="org.springframework" level="info"/>
 
-    <logger name="ru.job4j.passport" additivity="false">
+    <logger name="ru.job4j.passport" additivity="false" level="debug">
         <appender-ref ref="RollinffileAppender"/>
         <appender-ref ref="consloe"/>
     </logger>
 
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="RollinffileAppender"/>
         <appender-ref ref="consloe"/>
     </root>
